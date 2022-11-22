@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `Wallets` MODIFY `esewaQr` VARCHAR(191) NULL,
+    MODIFY `khaltiQr` VARCHAR(191) NULL,
+    MODIFY `IMEPayQr` VARCHAR(191) NULL;
