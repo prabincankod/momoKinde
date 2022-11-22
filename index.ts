@@ -4,6 +4,7 @@ import { prismaClient } from "./prisma/prisma";
 import authRouter from "./routes/authRoutes";
 import userRouter from "./routes/userRoutes";
 import campaignRoute from "./routes/campaignRoutes";
+import walletRoutes from "./routes/walletRoutes";
 
 dotenv.config();
 
@@ -13,7 +14,7 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/auth", authRouter);
 app.use("/campaign", campaignRoute);
-app.use("/wallet");
+app.use("/wallet", walletRoutes);
 
 app.get("/", async (req: Request, res: Response) => {
   // const data = await prismaClient.momoCampaign.findMany();
